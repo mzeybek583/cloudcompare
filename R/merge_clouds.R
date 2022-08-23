@@ -56,6 +56,7 @@ merge_clouds <- function(files, global_shift = F, global_shift_type= 'AUTO',c_ex
   }
 
 
+  auto_save_off <- '-AUTO_SAVE OFF'
 
 
   if (silent==T){
@@ -88,9 +89,10 @@ merge_clouds <- function(files, global_shift = F, global_shift_type= 'AUTO',c_ex
 
   s5= '-MERGE_CLOUDS'
 
+  s6= paste('-SAVE_CLOUDS' , 'FILE', output_dir, sep=' ')
 
 
-  cc_syntax <- paste(s1,s2,s3,s4,s5,sep=' ')
+  cc_syntax <- paste(s1,s2,s3,s4,s5,s6,sep=' ')
 
   return(cc_syntax)
 
