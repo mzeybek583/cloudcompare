@@ -19,7 +19,7 @@
 #' #' pc_files <- list.files('C://', pattern='.las$',full.names=T)
 #' CC(merge_clouds(files= pc_files))
 #' }
-merge_clouds <- function(files, global_shift = F, global_shift_type= 'AUTO',c_export_fmt= 'LAS', c_ext= 'las', silent= T, no_timestamp= T) {
+merge_clouds <- function(files, output_dir='C:\\output.las', global_shift = F, global_shift_type= 'AUTO',c_export_fmt= 'LAS', c_ext= 'las', silent= T, no_timestamp= T) {
 
 
   if(class(files) != 'character' ){
